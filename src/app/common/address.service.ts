@@ -10,7 +10,9 @@ export class AddressService {
   getUsAddresses() {
     let usAdd = [];
     ADDRESSES.find(address => {
-      usAdd.push(address.usAddress);
+      if (address.usAddress) {
+        usAdd.push(address.usAddress);
+      }
     });
     return usAdd;
   }
@@ -18,9 +20,21 @@ export class AddressService {
   getCanadianAddresses() {
     let canadian = [];
     ADDRESSES.find(address => {
-      canadian.push(address.canadianAddress);
+      if (address.canadianAddress) {
+        canadian.push(address.canadianAddress);
+      }
     });
     return canadian;
+  }
+
+  getEvenIds() {
+    let evens = [];
+    ADDRESSES.find(address => {
+      if (address.id % 2 === 0) {
+        evens.push(address);
+      }
+    });
+    return evens;
   }
 
   getAddress(id: number) {

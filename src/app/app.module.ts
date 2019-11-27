@@ -7,6 +7,7 @@ import {
   AddressIndexComponent,
   AddressShowComponent,
   AddressService,
+  AuthService,
   NavComponent,
   AddressDetailsComponent
 } from "./index";
@@ -20,7 +21,7 @@ import {
     NavComponent,
     AddressShowComponent
   ],
-  providers: [AddressService],
+  providers: [AuthService, AddressService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

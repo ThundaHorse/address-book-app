@@ -5,7 +5,8 @@ import { AddressIndexComponent, AddressDetailsComponent } from "./index";
 const routes: Routes = [
   { path: "addresses", component: AddressIndexComponent },
   { path: "addresses/:id", component: AddressDetailsComponent },
-  { path: "", redirectTo: "/addresses", pathMatch: "full" }
+  { path: "", redirectTo: "/addresses", pathMatch: "full" },
+  { path: "user", loadChildren: "./user/user.module#UserModule" }
 ];
 
 @NgModule({
