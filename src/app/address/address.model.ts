@@ -1,6 +1,6 @@
 export interface IAddress {
+  id: number;
   usAddress?: {
-    id: number;
     name: string;
     street: string;
     street2?: string;
@@ -9,7 +9,6 @@ export interface IAddress {
     zip: number;
   };
   canadianAddress?: {
-    id: number;
     name: string;
     street: string;
     street2?: string;

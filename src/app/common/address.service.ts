@@ -4,7 +4,7 @@ import { IAddress } from "../address/address.model";
 @Injectable()
 export class AddressService {
   getAddresses(): IAddress[] {
-    return ADDRESSES;
+    return ADDRESSES.sort((a, b) => a.id - b.id);
   }
 
   getUsAddresses() {
@@ -24,16 +24,14 @@ export class AddressService {
   }
 
   getAddress(id: number) {
-    return ADDRESSES.find(
-      add => add.usAddress.id === id || add.canadianAddress.id === id
-    );
+    return ADDRESSES.find(add => add.id === id);
   }
 }
 
 const ADDRESSES = [
   {
+    id: 1,
     usAddress: {
-      id: 1,
       name: "My place",
       street: "1234 Random Street",
       street2: "Unit 1000",
@@ -43,8 +41,18 @@ const ADDRESSES = [
     }
   },
   {
+    id: 8,
+    canadianAddress: {
+      name: "Poutine Palace",
+      street: "9999 Gravy Lane",
+      municipality: "Montreal",
+      province: "QC",
+      postalCode: "H3Z 2Y7"
+    }
+  },
+  {
+    id: 2,
     usAddress: {
-      id: 2,
       name: "Your place",
       street: "9876 Down the street",
       city: "Irvine",
@@ -53,8 +61,8 @@ const ADDRESSES = [
     }
   },
   {
+    id: 3,
     usAddress: {
-      id: 3,
       name: "Somewhere Over the Rainbow",
       street: "123 somewhere",
       city: "Honolulu",
@@ -63,8 +71,8 @@ const ADDRESSES = [
     }
   },
   {
+    id: 4,
     usAddress: {
-      id: 4,
       name: "His place",
       street: "1010 Over There St",
       street2: "Apt 500",
@@ -74,8 +82,8 @@ const ADDRESSES = [
     }
   },
   {
+    id: 5,
     usAddress: {
-      id: 5,
       name: "Her place",
       street: "3210 Her Street",
       city: "New York",
@@ -84,8 +92,8 @@ const ADDRESSES = [
     }
   },
   {
+    id: 6,
     usAddress: {
-      id: 6,
       name: "???'s place",
       street: "???? ????? ??????",
       street2: "????? ????",
@@ -95,8 +103,8 @@ const ADDRESSES = [
     }
   },
   {
+    id: 7,
     canadianAddress: {
-      id: 7,
       name: "Maple House",
       street: "1234 Maple Road",
       street2: "Unit 0",

@@ -23,7 +23,7 @@ import { IAddress } from "./address.model";
           {{ usOrCanadianAddress(address)?.state }}
           {{ usOrCanadianAddress(address)?.municipality }}
           {{ usOrCanadianAddress(address)?.zip }}
-          {{ usOrCanadianAddress(usOrCanadianAddress(address))?.postalCode }}
+          {{ usOrCanadianAddress(address)?.postalCode }}
         </p>
       </div>
     </div>
