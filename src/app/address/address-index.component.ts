@@ -5,7 +5,9 @@ import { IAddress } from "./address.model";
 @Component({
   selector: "",
   template: `
-    <h1>Addresses</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4">Addresses</h1>
+    </div>
     <div class="card-columns">
       <div *ngFor="let address of addresses">
         <address-show [address]="address"></address-show>
@@ -21,6 +23,12 @@ import { IAddress } from "./address.model";
         @include media-breakpoint-only(xl) {
           column-count: 5;
         }
+      }
+      .jumbotron {
+        background-color: dimgray;
+      }
+      h1.display-4 {
+        text-align: center;
       }
     `
   ]

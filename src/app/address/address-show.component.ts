@@ -38,9 +38,9 @@ import { IAddress } from "./address.model";
 })
 export class AddressShowComponent {
   @Input() address: IAddress;
-  card: string = "card text-white bg-dark";
+  card: string = "card text-white bg-dark rounded";
   shadowed: string = "card text-white bg-secondary shadow rounded";
-  noShadow: string = "card text-white bg-dark";
+  noShadow: string = "card text-white bg-dark rounded";
 
   usOrCanadianAddress(input) {
     return input.usAddress ? input.usAddress : input.canadianAddress;
