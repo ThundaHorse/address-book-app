@@ -7,13 +7,15 @@ import {
   AddressIndexComponent,
   AddressShowComponent,
   AddressService,
-  NavComponent
+  NavComponent,
+  AddressDetailsComponent
 } from "./index";
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule],
   declarations: [
     AppComponent,
+    AddressDetailsComponent,
     AddressIndexComponent,
     NavComponent,
     AddressShowComponent

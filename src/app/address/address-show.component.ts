@@ -9,7 +9,9 @@ import { IAddress } from "./address.model";
       (mouseover)="card = shadowed"
       (mouseout)="card = noShadow"
     >
-      <h3 class="card-header">{{ usOrCanadianAddress(address).name }}</h3>
+      <h3 class="card-header" [routerLink]="['/addresses', address.id]">
+        {{ usOrCanadianAddress(address).name }}
+      </h3>
       <div class="card-body">
         <p class="card-text">
           {{ usOrCanadianAddress(address).street }}
@@ -32,6 +34,12 @@ import { IAddress } from "./address.model";
     `
       .card {
         min-height: 14rem;
+      }
+      h3.card-header {
+        cursor: pointer;
+      }
+      h3.card-header:hover {
+        color: cyan;
       }
     `
   ]
