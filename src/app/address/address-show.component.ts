@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { IAddress } from "./address.model";
 
 @Component({
   selector: "address-show",
@@ -8,16 +9,21 @@ import { Component, Input } from "@angular/core";
       (mouseover)="card = shadowed"
       (mouseout)="card = noShadow"
     >
-      <h3 class="card-header">{{ address.name }}</h3>
+      <h3 class="card-header">{{ usOrCanadianAddress(address).name }}</h3>
       <div class="card-body">
         <p class="card-text">
-          {{ address.street }}
+          {{ usOrCanadianAddress(address).street }}
         </p>
         <p class="card-text">
-          {{ address?.street2 }}
+          {{ usOrCanadianAddress(address)?.street2 }}
         </p>
         <p class="card-text">
-          {{ address.city }}, {{ address.state }} {{ address.zip }}
+          {{ usOrCanadianAddress(address)?.province }}
+          {{ usOrCanadianAddress(address)?.city }},
+          {{ usOrCanadianAddress(address)?.state }}
+          {{ usOrCanadianAddress(address)?.municipality }}
+          {{ usOrCanadianAddress(address)?.zip }}
+          {{ usOrCanadianAddress(usOrCanadianAddress(address))?.postalCode }}
         </p>
       </div>
     </div>
@@ -31,8 +37,12 @@ import { Component, Input } from "@angular/core";
   ]
 })
 export class AddressShowComponent {
-  @Input() address: any;
+  @Input() address: IAddress;
   card: string = "card text-white bg-dark";
   shadowed: string = "card text-white bg-secondary shadow rounded";
   noShadow: string = "card text-white bg-dark";
+
+  usOrCanadianAddress(input) {
+    return input.usAddress ? input.usAddress : input.canadianAddress;
+  }
 }
