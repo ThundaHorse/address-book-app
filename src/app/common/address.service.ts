@@ -15,20 +15,20 @@ export class AddressService {
 const ADDRESSES = [
   {
     id: 1,
-    name: "Abe's place",
-    street: "3120 N Pine Island Rd",
-    street2: "Unit 402",
-    city: "Sunrise",
-    state: "FL",
-    zip: 33351
+    name: "My place",
+    street: "1234 Random Street",
+    street2: "Unit 1000",
+    city: "Chicago",
+    state: "IL",
+    zip: 60661
   },
   {
     id: 2,
-    name: "Mom's place",
-    street: "10945 Glenbarr Drive",
-    city: "Duluth",
-    state: "GA",
-    zip: 30096
+    name: "Your place",
+    street: "9876 Down the street",
+    city: "Irvine",
+    state: "CA",
+    zip: 90651
   },
   {
     id: 3,
@@ -40,29 +40,28 @@ const ADDRESSES = [
   },
   {
     id: 4,
-    name: "Stella's place",
-    street: "3120 N Pine Island Rd",
-    street2: "Unit 402",
-    city: "Sunrise",
-    state: "FL",
-    zip: 33351
+    name: "His place",
+    street: "1010 Over There St",
+    street2: "Apt 500",
+    city: "Atlanta",
+    state: "GA",
+    zip: 30331
   },
   {
     id: 5,
-    name: "Nala's place",
-    street: "3120 N Pine Island Rd",
-    street2: "Unit 402",
-    city: "Sunrise",
-    state: "FL",
-    zip: 33351
+    name: "Her place",
+    street: "3210 Her Street",
+    city: "New York",
+    state: "New York",
+    zip: 10001
   },
   {
     id: 6,
-    name: "Cayde's place",
-    street: "3120 N Pine Island Rd",
-    street2: "Unit 402",
-    city: "Sunrise",
-    state: "FL",
-    zip: 33351
+    name: "???'s place",
+    street: "???? ????? ??????",
+    street2: "????? ????",
+    city: "?????",
+    state: "?????",
+    zip: 11111
   }
 ];
