@@ -61,6 +61,16 @@ const ADDRESSES = [
     }
   },
   {
+    id: 9,
+    canadianAddress: {
+      name: "Ey? Palace",
+      street: "1234 Sorry About That Road",
+      municipality: "Vancouver",
+      province: "BC",
+      postalCode: "3JZ 2Y7"
+    }
+  },
+  {
     id: 3,
     usAddress: {
       name: "Somewhere Over the Rainbow",
