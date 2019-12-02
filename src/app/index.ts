@@ -10,3 +10,4 @@ export * from "./address/address-details.component";
 
 export * from "./user/profile/profile.component";
 export * from "./user/login/login.component";
+export * from "./user/login/logout.component";
